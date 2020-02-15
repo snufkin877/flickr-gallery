@@ -1,0 +1,7 @@
+.image-container {
+    margin: 7px;
+}
+
+.image-container img {
+    max-height: 200px;
+}
