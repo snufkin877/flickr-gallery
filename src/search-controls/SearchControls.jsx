@@ -15,7 +15,6 @@ const SearchControls = () => {
     const searchInputRef = useRef('');
 
     useEffect(() => {
-        console.log('useEffect!')
         setSavedSearchedItems(getSavedSearchedFromLocalStorage());
     }, []);
 
@@ -30,8 +29,6 @@ const SearchControls = () => {
     }
 
     const fetchData = async (searchTerm) => {
-        console.log('fetching data...')
-        console.log(searchTerm);
         const apiKey = '15b67c2a8b4288ff1fddf5eb56655cfb';
         const url = `https://api.flickr.com/services/rest/?method=flickr.photos.search&safe_search=1&format=json&nojsoncallback=1&api_key=${apiKey}&content_type=1&is_getty=1&text=${searchTerm}`;
         const response = await fetch(url);
